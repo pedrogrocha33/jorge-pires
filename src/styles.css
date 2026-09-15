@@ -1,0 +1,80 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora", ui-serif, Georgia, serif;
+  --color-navy: #1B2B42;
+  --color-obsidian: #0D1520;
+  --color-copper: #B87A58;
+  --color-silent: #FEFEFE;
+}
+
+/* Easing e Animações Estúdio Premium */
+html {
+  scroll-behavior: smooth;
+  background-color: #0D1520;
+  color: #FEFEFE;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  background-color: #0D1520;
+}
+
+/* Transições com easing weighted customizado */
+.transition-studio {
+  transition-property: all;
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-studio {
+  transition-property: transform, border-color, box-shadow, opacity, color;
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Multi-layered brand-infused shadows (Profundidade Orgânica) */
+.shadow-studio-lg {
+  box-shadow: 
+    0 4px 16px rgba(13, 21, 32, 0.5),
+    0 16px 40px rgba(27, 43, 66, 0.6),
+    0 30px 70px rgba(0, 0, 0, 0.4);
+}
+
+.shadow-studio-copper {
+  box-shadow: 
+    0 4px 20px rgba(13, 21, 32, 0.6),
+    0 16px 50px rgba(184, 122, 88, 0.12),
+    0 30px 70px rgba(0, 0, 0, 0.45);
+}
+
+/* Noise overlay sutil para quebrar planura digital */
+.bg-noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D1520;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1B2B42;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B87A58;
+}
